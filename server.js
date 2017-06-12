@@ -3,6 +3,7 @@ var fs = require('fs');
 var express = require('express');
 var exphbs = require('express-handlebars');
 
+var cSheetData = require('./cSheetData');
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -14,7 +15,7 @@ app.get('/', function(req, res, next){
 });
 
 app.get('/chsheet/:index', function(req, res, next){
-	
+	console.log("== url params for request:", req.params);
 });
 
 app.get('/style.css', function(req, res, next){
