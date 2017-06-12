@@ -12,10 +12,23 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res, next){
 	
+  var templateArgs = {
+
+  };
+
+  res.render('', templateArgs);
 });
 
-app.get('/chsheet/:index', function(req, res, next){
+app.get('/csheet/:index', function(req, res, next){
 	console.log("== url params for request:", req.params);
+	if(req.params.index < cSheetDataData.length){
+		var templateArgs = {
+		
+		}
+		res.render('', templateArgs);
+	} else {
+		next();
+	}
 });
 
 app.get('/style.css', function(req, res, next){
