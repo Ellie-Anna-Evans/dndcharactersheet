@@ -77,11 +77,29 @@ function setSaveThrow(){
 		throwList[i].firstChild.textContent = statList[i].getElementsByClassName('mod').textContent;
 	}	
 }
-
+/* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
 /*function setSpellDC(charClass){
 	
 }*/
-
+/*	Spellcasting abilities per class
+	Barbarian: N/A
+	Bard: charisma
+	Cleric: wisdom
+	Druid: wisdom
+	Fighter: intelligence
+	Monk: N/A
+	Paladin: charisma
+	Ranger: wisdom
+	Rogue: intelligence
+	Sorcerer: charisma
+	Warlock: charisma
+	Wizard: intelligence
+*/
+/* Spell Attack Bonus = proficiency bonus + spellcasting ability modifier*/
+/*function setSpellAtkBonus(charClass){
+	
+}
+*/
 function setCharInfo(){
 	var name = document.getElementById('name');
 	name = 
