@@ -118,15 +118,15 @@ function setSpellDC(charClass){
 function setSpellAtkBonus(charClass){
 	var spellAtk = document.getElementById('spellAtkBonusStat');
 	var profBonus = parseInt(document.getElementById('profStat'));
-	if(charClass === bard || charClass === paladin || charClass === sorcerer || charClass === warlock){
+	if(charClass === 'bard'	|| charClass === 'paladin' || charClass === 'sorcerer' || charClass === 'warlock'){
 		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
 		spellAtk = profBonus + spellMod;
 	}
-	else if(charClass === cleric || charClass === druid || charClass === ranger){
+	else if(charClass === 'cleric' || charClass === 'druid' || charClass === 'ranger'){
 		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
 		spellAtk = profBonus + spellMod;
 	}
-	else if(charClass === fighter || charClass === rogue || charClass === wizard){
+	else if(charClass === 'fighter' || charClass === 'rogue' || charClass === 'wizard'){
 		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
 		spellAtk = profBonus + spellMod;
 	}
