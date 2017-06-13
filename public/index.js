@@ -78,9 +78,25 @@ function setSaveThrow(){
 	}	
 }
 /* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
-/*function setSpellDC(charClass){
-	
-}*/
+function setSpellDC(charClass){
+	var spellSaveDC = document.getElementById('spellDCStat');
+	var profBonus = parseInt(document.getElementById('profStat'));
+	if(charClass === bard || charClass === paladin || charClass === sorcerer || charClass === warlock){
+		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
+		spellSaveDC = 8 + profBonus + spellMod;
+	}
+	else if(charClass === cleric || charClass === druid charClass || charClass === ranger){
+		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
+		spellSaveDC = 8 + profBonus + spellMod;
+	}
+	else if(charClass === fighter || charClass === rogue || charClass === wizard){
+		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
+		spellSaveDC = 8 + profBonus + spellMod;
+	}
+	else{
+		spellSaveDC = 0;
+	}
+}
 /*	Spellcasting abilities per class
 	Barbarian: N/A
 	Bard: charisma
@@ -96,10 +112,27 @@ function setSaveThrow(){
 	Wizard: intelligence
 */
 /* Spell Attack Bonus = proficiency bonus + spellcasting ability modifier*/
-/*function setSpellAtkBonus(charClass){
-	
+function setSpellAtkBonus(charClass){
+	var spellAtk = document.getElementById('spellAtkBonusStat');
+	var profBonus = parseInt(document.getElementById('profStat'));
+	if(charClass === bard || charClass === paladin || charClass === sorcerer || charClass === warlock){
+		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
+		spellAtk = profBonus + spellMod;
+	}
+	else if(charClass === cleric || charClass === druid || charClass === ranger){
+		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
+		spellAtk = profBonus + spellMod;
+	}
+	else if(charClass === fighter || charClass === rogue || charClass === wizard){
+		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
+		spellAtk = profBonus + spellMod;
+	}
+	else{
+		spellAtk = 0;
+	}
 }
-*/
+
+
 function setCharInfo(){
 	var name = document.getElementById('name');
 	name = 
