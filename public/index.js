@@ -6,7 +6,7 @@ function randomize(min, max) {
 
 function calcMod(stat, val){
 	var mod = stat.getElementsByClassName('mod')[0];
-	mod = (val-10)/2;
+	mod = Math.floor((val-10)/2);
 	stat.getElementsByClassName('mod')[0].textContent = mod;
 }
 
@@ -17,27 +17,30 @@ function randomButton(type, stat){
 }
 
 function incrementStat(stat){
-	var statFieldValue = stat.getElementsByClassName('stat')[0].textContent;
+	var statFieldValue = parseInt(stat.getElementsByClassName('stat')[0].textContent);
 	statFieldValue+=1;
 	stat.getElementsByClassName('stat')[0].textContent = statFieldValue;
-	calcMod(stat, statFieldValue
+	calcMod(stat, statFieldValue);
 }
 
 function decrementStat(stat){
-	var statFieldValue = stat.getElementsByClassName('stat')[0].textContent;
+	var statFieldValue = parseInt(stat.getElementsByClassName('stat')[0].textContent);
 	statFieldValue-=1;
 	stat.getElementsByClassName('stat')[0].textContent = statFieldValue;
+	calcMod(stat, statFieldValue);
 }
 
 function toggleProf(skill){
 	if(skill.classList.contains('toggled')){
 		skill.classList.remove('toggled');
-		var newVal = skill.firstChild.textContent;
+		console.log(skill.firstChild.textContent);
+		var newVal = parseInt(skill.firstChild.textContent);
 		newVal -= 2;
 		skill.firstChild.textContent = newVal;
 	} else{
 		skill.classList.add('toggled');
-		var newVal = skill.firstChild.textContent;
+		console.log(skill.firstChild.textContent);
+		var newVal = parseInt(skill.firstChild.textContent);
 		newVal += 2;
 		skill.firstChild.textContent = newVal;
 	}
@@ -48,23 +51,25 @@ function setSkills(){
 	var statList = document.getElementsByClassName('stats')[0].childNodes;
 	for (var i = 0; i < skillList.length; i++){
 		switch(skillList[i].classList.item(1)){
-			str:
+			case 'str':
 				skillList[i].firstChild.textContent = statList[0].getElementsByClassName('mod').textContent;
 				break;
-			dex:
+			case 'dex':
 				skillList[i].firstChild.textContent = statList[1].getElementsByClassName('mod').textContent;
 				break;
-			con:
+			case 'con':
 				skillList[i].firstChild.textContent = statList[2].getElementsByClassName('mod').textContent;
 				break;
-			intl:
+			case 'intl':
 				skillList[i].firstChild.textContent = statList[3].getElementsByClassName('mod').textContent;
 				break;
-			wis:
+			case 'wis':
 				skillList[i].firstChild.textContent = statList[4].getElementsByClassName('mod').textContent;
 				break;
-			cha:
+			case 'cha':
 				skillList[i].firstChild.textContent = statList[5].getElementsByClassName('mod').textContent;
+				break;
+			default:
 				break;
 		}
 	}
@@ -82,8 +87,36 @@ function setSaveThrow(){
 	
 }*/
 
-function setCharInfo(){
+/*function setCharInfo(){
 	var name = document.getElementById('name');
 	name = 
-}
+}*/
+
+window.addEventListener('DOMContentLoaded', function() {
+	
+	var incrementButtons = document.getElementsByClassName('increment-stat-button');
+	for (var i = 0; i < incrementButtons.length; i++){
+		incrementButtons[i].addEventListener('click', function(event){
+			incrementStat(event.target.parentNode);
+		});
+	}
+	
+	var decrementButtons = document.getElementsByClassName('decrement-stat-button');
+	for (var i = 0; i < decrementButtons.length; i++){
+		decrementButtons[i].addEventListener('click', function(event){
+			decrementStat(event.target.parentNode);
+		});
+	}
+	
+	/*setSaveThrow();
+	setSkills();*/
+	
+	var toggleButtons = document.getElementsByClassName('toggle-proficiency');
+	for (var i = 0; i < toggleButtons.length; i++){
+		toggleButtons[i].addEventListener('click', function(event){
+			toggleProf(event.target.parentNode);
+		});
+	}
+	
+});
 
