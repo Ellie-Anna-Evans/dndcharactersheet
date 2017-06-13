@@ -82,8 +82,13 @@ function setSaveThrow(){
 	
 }*/
 
-function setCharInfo(){
+/*function setCharInfo(){
 	var name = document.getElementById('name');
 	name = 
+}*/
+
+window.addEventListener('DOMContentLoaded', function() {
+	
+	var incrementButtons
 }
 

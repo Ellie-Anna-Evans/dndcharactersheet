@@ -1,17 +1,19 @@
 .navigation {
-  background-color: #303030;
-  color: #ffffff;
   font-size: 18px;
   line-height: 22px;
+  background-color: #FFEBCD;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .navlist {
   margin: 0 0 0 20px;
   padding: 0;
+
 }
 
 .navitem {
   display: inline-block;
+  padding: 7px;
 }
 
 .navlink a {
@@ -23,12 +25,27 @@
   box-shadow: inset 0 -3px #319df6;
 }
 
+.site-title{
+	font-family: 'Source Serif Pro', serif;
+	font-size: 50px;
+	margin: 0;
+	padding: 20px;
+	color: #ffffff;
+	background-color: #8b0000;
+}
+
 header{
-	background-color: #d0d0d0;
+
 }
 
 body{
 	background-color: #dddddd;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+main{
+	padding: 60px;
 }
 
 #charInfo #name{}
@@ -39,15 +56,25 @@ body{
 #charInfo #alignment{}
 #charInfo #profBonus{}
 
+.stats div {
+	display: inline-block;
+}
 .stats .statName{}
 .stats .stat{}
 .stats .mod{}
 .stats .increment-stat-button{}
 .stats .decrement-stat-button{}
 
+#throws div{
+	display: inline-block;
+}
+
 #throws .mod{}
 #throws .statName{}
 
+#skills	div{
+	display: inline-block;
+}
 #skills .mod{}
 #skills .description{}
 #skills #toggle-proficiency{}
