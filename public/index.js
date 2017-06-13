@@ -44,10 +44,38 @@ function toggleProf(skill){
 }
 
 function setSkills(){
-	var skillList = document.getElementById('skills');
+	var skillList = document.getElementById('skills').childNodes;
+	var statList = document.getElementsByClassName('stats')[0].childNodes;
 	for (var i = 0; i < skillList.length; i++){
-		
+		switch(skillList[i].classList.item(1)){
+			str:
+				skillList[i].firstChild.textContent = statList[0].getElementsByClassName('mod').textContent;
+				break;
+			dex:
+				skillList[i].firstChild.textContent = statList[1].getElementsByClassName('mod').textContent;
+				break;
+			con:
+				skillList[i].firstChild.textContent = statList[2].getElementsByClassName('mod').textContent;
+				break;
+			intl:
+				skillList[i].firstChild.textContent = statList[3].getElementsByClassName('mod').textContent;
+				break;
+			wis:
+				skillList[i].firstChild.textContent = statList[4].getElementsByClassName('mod').textContent;
+				break;
+			cha:
+				skillList[i].firstChild.textContent = statList[5].getElementsByClassName('mod').textContent;
+				break;
+		}
 	}
+}
+
+function setSaveThrow(){
+	var throwList = document.getElementById('throws').childNodes;
+	var statList = document.getElementsByClassName('stats')[0].childNodes;
+	for (var i = 0; i < 6; i++){
+		throwList[i].firstChild.textContent = statList[i].getElementsByClassName('mod').textContent;
+	}	
 }
 
 /*function setSpellDC(charClass){
