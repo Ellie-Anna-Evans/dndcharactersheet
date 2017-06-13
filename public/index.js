@@ -80,10 +80,61 @@ function setSaveThrow(){
 		throwList[i].children[0].textContent = statList[i].getElementsByClassName('mod').textContent;
 	}	
 }
+/* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
+function setSpellDC(charClass){
+	var spellSaveDC = document.getElementById('spellDCStat');
+	var profBonus = parseInt(document.getElementById('profStat'));
+	if(charClass === bard || charClass === paladin || charClass === sorcerer || charClass === warlock){
+		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
+		spellSaveDC = 8 + profBonus + spellMod;
+	}
+	else if(charClass === cleric || charClass === druid charClass || charClass === ranger){
+		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
+		spellSaveDC = 8 + profBonus + spellMod;
+	}
+	else if(charClass === fighter || charClass === rogue || charClass === wizard){
+		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
+		spellSaveDC = 8 + profBonus + spellMod;
+	}
+	else{
+		spellSaveDC = 0;
+	}
+}
+/*	Spellcasting abilities per class
+	Barbarian: N/A
+	Bard: charisma
+	Cleric: wisdom
+	Druid: wisdom
+	Fighter: intelligence
+	Monk: N/A
+	Paladin: charisma
+	Ranger: wisdom
+	Rogue: intelligence
+	Sorcerer: charisma
+	Warlock: charisma
+	Wizard: intelligence
+*/
+/* Spell Attack Bonus = proficiency bonus + spellcasting ability modifier*/
+function setSpellAtkBonus(charClass){
+	var spellAtk = document.getElementById('spellAtkBonusStat');
+	var profBonus = parseInt(document.getElementById('profStat'));
+	if(charClass === bard || charClass === paladin || charClass === sorcerer || charClass === warlock){
+		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
+		spellAtk = profBonus + spellMod;
+	}
+	else if(charClass === cleric || charClass === druid || charClass === ranger){
+		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
+		spellAtk = profBonus + spellMod;
+	}
+	else if(charClass === fighter || charClass === rogue || charClass === wizard){
+		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
+		spellAtk = profBonus + spellMod;
+	}
+	else{
+		spellAtk = 0;
+	}
+}
 
-/*function setSpellDC(charClass){
-	
-}*/
 
 /*function setCharInfo(){
 	var name = document.getElementById('name');
