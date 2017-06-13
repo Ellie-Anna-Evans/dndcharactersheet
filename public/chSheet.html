@@ -37,17 +37,35 @@
 				<option value="wizard">Wizard</option>
 			</select>
 			<select> 							<!--race-->
-				<option value="dwarf">Dwarf</option>
-				<option value="dwarf">Elf</option>
-				<option value="dwarf">Halfling</option>
-				<option value="dwarf">Human</option>
-				<option value="dwarf">Dragonborn</option>
-				<option value="dwarf">Gnome</option>
-				<option value="dwarf">Half-Elf</option>
-				<option value="dwarf">Half-Orc</option>
-				<option value="dwarf">Tiefling</option>
+				<option value="dwarf-hill">Dwarf(Hill)</option>
+				<option value="dwarf-mountain">Dwarf(Mountain)</option>
+				<option value="elf-high">Elf(High)</option>
+				<option value="elf-dark">Elf(Dark)</option>
+				<option value="halfling-lightfoot">Halfling(Lightfoot)</option>
+				<option value="halfling-stout">Halfling(Stout)</option>
+				<option value="human">Human</option>
+				<option value="dragonborn">Dragonborn</option>
+				<option value="gnome-forest">Gnome(Forest)</option>
+				<option value="gnome-rock">Gnome(Rock)</option>
+				<option value="half-lf">Half-Elf</option>
+				<option value="half-orc">Half-Orc</option>
+				<option value="tiefling">Tiefling</option>
 			</select>
-			<input type="text" id="background" placeholder="Enter your background">
+			<select>
+				<option value="acolyte">Acolyte</option>
+				<option value="charlatan">Charlatan</option>
+				<option value="criminal">Criminal</option>
+				<option value="entertainer">Entertainer</option>
+				<option value="folk-hero">Folk Hero</option>
+				<option value="guild-artisan">Guild Artisan</option>
+				<option value="hermit">Hermit</option>
+				<option value="noble">Noble</option>
+				<option value="outlander">Outlander</option>
+				<option value="sage">Sage</option>
+				<option value="sailor">Sailor</option>
+				<option value="soldier">Soldier</option>
+				<option value="urchin">Urchin</option>
+			</select>
 			<select>							<!--Alignment-->
 				<option value="chaotic-evil">Chaotic Evil</option>
 				<option value="chaotic-neutral">Chaotic Neutral</option>
@@ -134,92 +152,92 @@
 		<div id="skills">
 			<div class="acrobatics">
 				<div class="mod">0</div>
-				<div class="skill">Acrobatics(Dex)</div>
+				<div class="skill dexterity">Acrobatics(Dex)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="animalHandling">
 				<div class="mod">0</div>
-				<div class="skill">Animal Handling(Wis)</div>
+				<div class="skill wisdom">Animal Handling(Wis)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="arcana">
 				<div class="mod">0</div>
-				<div class="skill">Arcana(Int)</div>
+				<div class="skill intelligence">Arcana(Int)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="athletics">
 				<div class="mod">0</div>
-				<div class="skill">Athletics(Str)</div>
+				<div class="skill strength">Athletics(Str)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="deception">
 				<div class="mod">0</div>
-				<div class="skill">Deception(Cha)</div>
+				<div class="skill charisma">Deception(Cha)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="history">
 				<div class="mod">0</div>
-				<div class="skill">History(Int)</div>
+				<div class="skill intelligence">History(Int)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="insight">
 				<div class="mod">0</div>
-				<div class="skill">Insight(Wis)</div>
+				<div class="skill wisdom">Insight(Wis)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="intimidation">
 				<div class="mod">0</div>
-				<div class="skill">Intimidation(Cha)</div>
+				<div class="skill charisma">Intimidation(Cha)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="investigation">
 				<div class="mod">0</div>
-				<div class="skill">Investigation(Int)</div>
+				<div class="skill intelligence">Investigation(Int)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="medicine">
 				<div class="mod">0</div>
-				<div class="skill">Medicine(Wis)</div>
+				<div class="skill wisdom">Medicine(Wis)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="nature">
 				<div class="mod">0</div>
-				<div class="skill">Nature(Int)</div>
+				<div class="skill intelligence">Nature(Int)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="perception">
 				<div class="mod">0</div>
-				<div class="skill">Perception(Wis)</div>
+				<div class="skill wisdom">Perception(Wis)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="performance">
 				<div class="mod">0</div>
-				<div class="skill">Performance(Cha)</div>
+				<div class="skill charisma">Performance(Cha)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="persuasion">
 				<div class="mod">0</div>
-				<div class="skill">Persuasion(Cha)</div>
+				<div class="skill charisma">Persuasion(Cha)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="religion">
 				<div class="mod">0</div>
-				<div class="skill">Religion(Int)</div>
+				<div class="skill intelligence">Religion(Int)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="sleightOfHand">
 				<div class="mod">0</div>
-				<div class="skill">Sleight of Hand(Dex)</div>
+				<div class="skill dexterity">Sleight of Hand(Dex)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="stealth">
 				<div class="mod">0</div>
-				<div class="skill">Stealth(Dex)</div>
+				<div class="skill dexterity">Stealth(Dex)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 			<div class="survival">
 				<div class="mod">0</div>
-				<div class="skill">Survival(Wis)</div>
+				<div class="skill wisdom">Survival(Wis)</div>
 				<button type="button" id="toggle-proficiency"></button>
 			</div>
 		</div>
