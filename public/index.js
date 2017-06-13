@@ -33,53 +33,51 @@ function decrementStat(stat){
 function toggleProf(skill){
 	if(skill.classList.contains('toggled')){
 		skill.classList.remove('toggled');
-		console.log(skill.firstChild.textContent);
-		var newVal = parseInt(skill.firstChild.textContent);
+		var newVal = parseInt(skill.children[0].textContent);
 		newVal -= 2;
-		skill.firstChild.textContent = newVal;
+		skill.children[0].textContent = newVal;
+		return;
 	} else{
 		skill.classList.add('toggled');
-		console.log(skill.firstChild.textContent);
-		var newVal = parseInt(skill.firstChild.textContent);
+		var newVal = parseInt(skill.children[0].textContent);
 		newVal += 2;
-		skill.firstChild.textContent = newVal;
+		skill.children[0].textContent = newVal;
+		return;
 	}
 }
 
 function setSkills(){
-	var skillList = document.getElementById('skills').childNodes;
-	var statList = document.getElementsByClassName('stats')[0].childNodes;
+	var skillList = document.getElementById('skills').children;
+	var statList = document.getElementsByClassName('stats')[0].children;
 	for (var i = 0; i < skillList.length; i++){
-		switch(skillList[i].classList.item(1)){
+		switch(skillList[i].children[1].classList.item(1)){
 			case 'str':
-				skillList[i].firstChild.textContent = statList[0].getElementsByClassName('mod').textContent;
+				skillList[i].children[0].textContent = statList[0].getElementsByClassName('mod').textContent;
 				break;
 			case 'dex':
-				skillList[i].firstChild.textContent = statList[1].getElementsByClassName('mod').textContent;
+				skillList[i].children[0].textContent = statList[1].getElementsByClassName('mod').textContent;
 				break;
 			case 'con':
-				skillList[i].firstChild.textContent = statList[2].getElementsByClassName('mod').textContent;
+				skillList[i].children[0].textContent = statList[2].getElementsByClassName('mod').textContent;
 				break;
 			case 'intl':
-				skillList[i].firstChild.textContent = statList[3].getElementsByClassName('mod').textContent;
+				skillList[i].children[0].textContent = statList[3].getElementsByClassName('mod').textContent;
 				break;
 			case 'wis':
-				skillList[i].firstChild.textContent = statList[4].getElementsByClassName('mod').textContent;
+				skillList[i].children[0].textContent = statList[4].getElementsByClassName('mod').textContent;
 				break;
 			case 'cha':
-				skillList[i].firstChild.textContent = statList[5].getElementsByClassName('mod').textContent;
-				break;
-			default:
+				skillList[i].children[0].textContent = statList[5].getElementsByClassName('mod').textContent;
 				break;
 		}
 	}
 }
 
 function setSaveThrow(){
-	var throwList = document.getElementById('throws').childNodes;
-	var statList = document.getElementsByClassName('stats')[0].childNodes;
+	var throwList = document.getElementById('throws').children;
+	var statList = document.getElementsByClassName('stats')[0].children;
 	for (var i = 0; i < 6; i++){
-		throwList[i].firstChild.textContent = statList[i].getElementsByClassName('mod').textContent;
+		throwList[i].children[0].textContent = statList[i].getElementsByClassName('mod').textContent;
 	}	
 }
 /* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
@@ -149,6 +147,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	for (var i = 0; i < incrementButtons.length; i++){
 		incrementButtons[i].addEventListener('click', function(event){
 			incrementStat(event.target.parentNode);
+			setSaveThrow();
+			setSkills();
 		});
 	}
 	
@@ -156,11 +156,13 @@ window.addEventListener('DOMContentLoaded', function() {
 	for (var i = 0; i < decrementButtons.length; i++){
 		decrementButtons[i].addEventListener('click', function(event){
 			decrementStat(event.target.parentNode);
+			setSaveThrow();
+			setSkills();
 		});
 	}
 	
-	/*setSaveThrow();
-	setSkills();*/
+	setSaveThrow();
+	setSkills();
 	
 	var toggleButtons = document.getElementsByClassName('toggle-proficiency');
 	for (var i = 0; i < toggleButtons.length; i++){
