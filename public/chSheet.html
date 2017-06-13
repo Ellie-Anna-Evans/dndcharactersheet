@@ -9,30 +9,56 @@
   </head>
   <body>
     <header>
-<<<<<<< HEAD
 		<nav class="navigation">
 			<h2>DnD Create a Character</h2>
 			<ul class="navlist">
 				<li class="navitem navlink">Home</li>
 				<li class="navitem navlink">Create a Sheet</li>
 			</ul>
-=======
-	<nav class="navigation">
-	    <ul class="navlist">
-		    <li class="navitem navlink">Home</li>
-		    <li class="navitem navlink">Create a Sheet</li>
-        </ul>
->>>>>>> d458e48d0aa8fac812aab92cc830543f4ad24b79
+
  	</nav>
     </header>
     <main>
 		<div id="charInfo">
-			<div id="name">Character Name</div>
-			<div id="level">Character Level</div>
-			<div id="class">Class</div>
-			<div id="race">race</div>
-			<div id="background">background</div>
-			<div id="alignment">alignment</div>
+			<input type="text" id="name" placeholder="Enter Character Name">
+			<input type="text" id="level" placeholder="Enter Level">
+			<select>							<!--class-->
+				<option value="barbarian">Barbarian</option>
+				<option value="bard">Bard</option>
+				<option value="cleric">Cleric</option>
+				<option value="druid">Druid</option>
+				<option value="fighter">Fighter</option>
+				<option value="monk">Monk</option>
+				<option value="paladin">Paladin</option>
+				<option value="ranger">Ranger</option>
+				<option value="rogue">Rogue</option>
+				<option value="sorcerer">Sorcerer</option>
+				<option value="warlock">Warlock</option>
+				<option value="wizard">Wizard</option>
+			</select>
+			<select> 							<!--race-->
+				<option value="dwarf">Dwarf</option>
+				<option value="dwarf">Elf</option>
+				<option value="dwarf">Halfling</option>
+				<option value="dwarf">Human</option>
+				<option value="dwarf">Dragonborn</option>
+				<option value="dwarf">Gnome</option>
+				<option value="dwarf">Half-Elf</option>
+				<option value="dwarf">Half-Orc</option>
+				<option value="dwarf">Tiefling</option>
+			</select>
+			<input type="text" id="background" placeholder="Enter your background">
+			<select>							<!--Alignment-->
+				<option value="chaotic-evil">Chaotic Evil</option>
+				<option value="chaotic-neutral">Chaotic Neutral</option>
+				<option value="chaotic-good">Chaotic Good</option>
+				<option value="neutral-evil">Neutral Evil</option>
+				<option value="true-neutral">True Neutral</option>
+				<option value="neutral-good">Neutral Good</option>
+				<option value="lawful-evil">Lawful Evil</option>
+				<option value="lawful-neutral">Lawful Neutral</option>
+				<option value="lawful-good">Lawful Good</option>
+			</select>
 			<div id="profBonus">Proficiency Bonus</div>
 		</div>
 		<div class="stats">
