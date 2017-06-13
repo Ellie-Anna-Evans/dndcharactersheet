@@ -37,7 +37,8 @@ body{
 #charInfo #race{}
 #charInfo #background{}
 #charInfo #alignment{}
-#charInfo #profBonus{}
+#charInfo #proficieny{}
+#charInfo #profStat{}
 
 .stats .statName{}
 .stats .stat{}
