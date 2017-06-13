@@ -18,3 +18,16 @@ function decrementStat(stat){
 	var statFieldValue = stat.getElementsByClassName('stat').textContent;
 	statFieldValue-=1;
 }
+function toggleProf(skill){
+	
+}
+
+function setSpellDC(charClass){
+	
+}
+
+function setCharName(){
+	
+}
+
+function set
