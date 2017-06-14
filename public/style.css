@@ -34,10 +34,6 @@
 	background-color: #8b0000;
 }
 
-header{
-
-}
-
 body{
 	background-color: #dddddd;
 	margin: 0;
@@ -55,7 +51,9 @@ main{
 #charInfo #background{}
 #charInfo #alignment{}
 #charInfo #proficieny{}
-#charInfo #profStat{}
+#charInfo #profStat{
+	display: inline-block;
+}
 
 .stats div {
 	display: inline-block;
@@ -89,6 +87,10 @@ main{
 #skills .description{}
 #skills .toggle-proficiency{}
 
-#spellDC{}
+#spellDCStat{
+	display: inline-block;
+}
 
-#spellAtkBonus{}
+#spellAtkBonusStat{
+	display: inline-block;
+}
