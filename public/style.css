@@ -44,15 +44,41 @@ main{
 	padding: 60px;
 }
 
-#charInfo #name{}
-#charInfo #level{}
-#charInfo #class{}
-#charInfo #race{}
-#charInfo #background{}
-#charInfo #alignment{}
-#charInfo #proficieny{}
+#charInfo{
+
+	flex: 0 1 33%;
+	flex-wrap: wrap;
+	border: 1px solid #000000;
+}
+#charInfo #name{
+	margin: 5px;
+}
+#charInfo #level{
+	margin: 5px;
+
+}
+#charInfo #class{
+	margin: 5px;
+}
+#charInfo #race{
+	margin: 5px;
+}
+#charInfo #background{
+	margin: 5px;
+}
+#charInfo #alignment{
+	margin: 5px;
+}
+#charInfo #proficieny{
+	display: inline-block;
+}
 #charInfo #profStat{
 	display: inline-block;
+}
+
+.stats{
+	border: 1px solid #000000;
+	margin: 5px;
 }
 
 .stats div {
@@ -61,21 +87,50 @@ main{
 	padding: 5px;
 	margin: 5px;
 }
-.stats .statName{}
+.stats .statName{
+	border: none;
+}
 .stats .stat{}
 .stats .mod{}
-.stats .increment-stat-button{}
-.stats .decrement-stat-button{}
+.stats .increment-stat-button{
+	border-radius: 33px;
+	height: 25px;
+	width: 25px;
+	border: solid;
+	border-width: 1px;
+}
+.stats .decrement-stat-button{
+	border-radius: 33px;
+	height: 25px;
+	width: 25px;
+	border: solid;
+	border-width: 1px;
+}
+
+#throws{
+	border: 1px solid #000000;
+	margin: 5px;
+}
 
 #throws div{
+
 	display: inline-block;
 	border: 1px solid #000000;
 	padding: 5px;
 	margin: 5px;
 }
 
-#throws .mod{}
-#throws .statName{}
+#throws .mod{
+
+}
+#throws .statName{
+	border: none;
+}
+
+#skills{
+	border: 1px solid #000000;
+	margin: 5px;
+}
 
 #skills	div{
 	display: inline-block;
@@ -84,8 +139,22 @@ main{
 	margin: 5px;
 }
 #skills .mod{}
-#skills .description{}
-#skills .toggle-proficiency{}
+#skills .str,
+#skills .cha,
+#skills .wis,
+#skills .intl,
+#skills .dex,
+#skills .con{
+	border: none;
+}
+
+.toggle-proficiency{
+	border-radius: 33px;
+	height: 30px;
+	width: 30px;
+	border: solid;
+	border-width: 1px;
+}
 
 #spellDCStat{
 	display: inline-block;
