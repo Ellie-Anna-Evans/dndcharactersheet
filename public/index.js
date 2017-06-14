@@ -82,7 +82,7 @@ function setSaveThrow(){
 	var statList = document.getElementsByClassName('stats')[0].children;
 	for (var i = 0; i < 6; i++){
 		throwList[i].children[0].textContent = statList[i].children[3].textContent;
-		if(throwList[i].classList.item(1) === 'toggled'){ throwList[i].children[0].textContent = parseInt(throwList[i].children[0].textContent) + 2};
+		if(throwList[i].classList.item(2) === 'toggled'){ throwList[i].children[0].textContent = parseInt(throwList[i].children[0].textContent) + 2};
 	}
 }
 /* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
