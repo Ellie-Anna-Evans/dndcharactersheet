@@ -118,6 +118,12 @@ main{
 
 }
 
+#empty{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
 #throws div{
 
 	display: inline-block;
@@ -187,4 +193,19 @@ main{
 
 #spellAtkBonusStat{
 	display: inline-block;
+}
+
+#save-button{
+	font-family: 'Josefin Sans', sans-serif;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	height: 60px;
+	width: 60px;
+	border: none;
+	border-radius: 30px;
+	font-size: 20px;
+	background-color: #8b0000;
+	color: #fff;
+	cursor: pointer;
 }
