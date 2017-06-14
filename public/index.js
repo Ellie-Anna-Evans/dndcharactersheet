@@ -50,27 +50,27 @@ function setSkills(){
 	for (var i = 0; i < skillList.length; i++){
 		switch(skillList[i].children[1].classList.item(1)){
 			case 'str':
-				skillList[i].children[0].textContent = parseInt(statList[0].children[2].textContent);
+				skillList[i].children[0].textContent = parseInt(statList[0].children[3].textContent);
 				if(skillList[i].classList.item(1) === 'toggled'){ skillList[i].children[0].textContent = parseInt(skillList[i].children[0].textContent) + 2};
 				break;
 			case 'dex':
-				skillList[i].children[0].textContent = parseInt(statList[1].children[2].textContent);
+				skillList[i].children[0].textContent = parseInt(statList[1].children[3].textContent);
 				if(skillList[i].classList.item(1) === 'toggled'){ skillList[i].children[0].textContent = parseInt(skillList[i].children[0].textContent) + 2};
 				break;
 			case 'con':
-				skillList[i].children[0].textContent = parseInt(statList[2].children[2].textContent);
+				skillList[i].children[0].textContent = parseInt(statList[2].children[3].textContent);
 				if(skillList[i].classList.item(1) === 'toggled'){ skillList[i].children[0].textContent = parseInt(skillList[i].children[0].textContent) + 2};
 				break;
 			case 'intl':
-				skillList[i].children[0].textContent = parseInt(statList[3].children[2].textContent);
+				skillList[i].children[0].textContent = parseInt(statList[3].children[3].textContent);
 				if(skillList[i].classList.item(1) === 'toggled'){ skillList[i].children[0].textContent = parseInt(skillList[i].children[0].textContent) + 2};
 				break;
 			case 'wis':
-				skillList[i].children[0].textContent = parseInt(statList[4].children[2].textContent);
+				skillList[i].children[0].textContent = parseInt(statList[4].children[3].textContent);
 				if(skillList[i].classList.item(1) === 'toggled'){ skillList[i].children[0].textContent = parseInt(skillList[i].children[0].textContent) + 2};
 				break;
 			case 'cha':
-				skillList[i].children[0].textContent = parseInt(statList[5].children[2].textContent);
+				skillList[i].children[0].textContent = parseInt(statList[5].children[3].textContent);
 				if(skillList[i].classList.item(1) === 'toggled'){ skillList[i].children[0].textContent = parseInt(skillList[i].children[0].textContent) + 2};
 				break;
 		}
@@ -81,7 +81,7 @@ function setSaveThrow(){
 	var throwList = document.getElementById('throws').children;
 	var statList = document.getElementsByClassName('stats')[0].children;
 	for (var i = 0; i < 6; i++){
-		throwList[i].children[0].textContent = statList[i].children[2].textContent;
+		throwList[i].children[0].textContent = statList[i].children[3].textContent;
 		if(throwList[i].classList.item(1) === 'toggled'){ throwList[i].children[0].textContent = parseInt(throwList[i].children[0].textContent) + 2};
 	}
 }
@@ -89,13 +89,13 @@ function setSaveThrow(){
 function setSpellDC(charClass){
 	var profBonus = parseInt(document.getElementById('profStat').textContent);
 	if((charClass === 'bard') || (charClass === 'paladin') || (charClass === 'sorcerer') || (charClass === 'warlock')){
-		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
+		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[3].textContent);
 		document.getElementById('spellDCStat').textContent = 8 + profBonus + spellMod;
 	} else if((charClass === 'cleric') || (charClass === 'druid') || (charClass === 'ranger')){
-		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
+		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[3].textContent);
 		document.getElementById('spellDCStat').textContent = 8 + profBonus + spellMod;
 	} else if((charClass === 'fighter') || (charClass === 'rogue') || (charClass === 'wizard')){
-		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
+		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[3].textContent);
 		document.getElementById('spellDCStat').textContent = 8 + profBonus + spellMod;
 	} else{
 		document.getElementById('spellDCStat').textContent = 0;
@@ -119,13 +119,13 @@ function setSpellDC(charClass){
 function setSpellAtkBonus(charClass){
 	var profBonus = parseInt(document.getElementById('profStat').textContent);
 	if((charClass === 'bard') || (charClass === 'paladin') || (charClass === 'sorcerer') || (charClass === 'warlock')){
-		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
+		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[3].textContent);
 		document.getElementById('spellAtkBonusStat').textContent = profBonus + spellMod;
 	} else if((charClass === 'cleric') || (charClass === 'druid') || (charClass === 'ranger')){
-		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
+		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[3].textContent);
 		document.getElementById('spellAtkBonusStat').textContent = profBonus + spellMod;
 	} else if((charClass === 'fighter') || (charClass === 'rogue') || (charClass === 'wizard')){
-		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
+		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[3].textContent);
 		document.getElementById('spellAtkBonusStat').textContent = profBonus + spellMod;
 	} else{
 		document.getElementById('spellAtkBonusStat').textContent = 0;

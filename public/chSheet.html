@@ -18,7 +18,7 @@
 		</nav>
     </header>
     <main>
-		<div id="charInfo"><p>Character Info</p>
+		<div id="charInfo">
 			<input type="text" id="name" placeholder="Enter Character Name">
 			<input type="text" id="level" placeholder="Enter Level">
 			<select id="class">							<!--Class-->
@@ -50,7 +50,7 @@
 				<option value="half-orc">Half-Orc</option>
 				<option value="tiefling">Tiefling</option>
 			</select>
-			<select id="background">					<!--Background-->
+			<select id="background">							<!--Background-->
 				<option value="acolyte">Acolyte</option>
 				<option value="charlatan">Charlatan</option>
 				<option value="criminal">Criminal</option>
@@ -65,7 +65,7 @@
 				<option value="soldier">Soldier</option>
 				<option value="urchin">Urchin</option>
 			</select>
-			<select id="alignment">						<!--Alignment-->
+			<select id="alignment">							<!--Alignment-->
 				<option value="chaotic-evil">Chaotic Evil</option>
 				<option value="chaotic-neutral">Chaotic Neutral</option>
 				<option value="chaotic-good">Chaotic Good</option>
@@ -78,51 +78,51 @@
 			</select>
 			<div id="proficiency">Proficiency Bonus: <div id="profStat">2</div></div>
 		</div>
-		<div class="stats"><p>Stats</p>
+		<div class="stats">
 			<div class="strength">
 				<div class="statName">Strength:</div>
 				<div class="stat">10</div>
-				(<div class="mod">0</div>)
+				<div id="empty">(</div><div class="mod">0</div><div id="empty">)</div>
 				<button type="button" class="decrement-stat-button">-</button>
 				<button type="button" class="increment-stat-button">+</button>
 			</div>
 			<div class="dexterity">
 				<div class="statName">Dexterity:</div>
 				<div class="stat">10</div>
-				(<div class="mod">0</div>)
+				<div id="empty">(</div><div class="mod">0</div><div id="empty">)</div>
 				<button type="button" class="decrement-stat-button">-</button>
 				<button type="button" class="increment-stat-button">+</button>
 			</div>
 			<div class="constitution">
 				<div class="statName">Constitution:</div>
 				<div class="stat">10</div>
-				(<div class="mod">0</div>)
+				<div id="empty">(</div><div class="mod">0</div><div id="empty">)</div>
 				<button type="button" class="decrement-stat-button">-</button>
 				<button type="button" class="increment-stat-button">+</button>
 			</div>
 			<div class="intelligence">
 				<div class="statName">Intelligence:</div>
 				<div class="stat">10</div>
-				(<div class="mod">0</div>)
+				<div id="empty">(</div><div class="mod">0</div><div id="empty">)</div>
 				<button type="button" class="decrement-stat-button">-</button>
 				<button type="button" class="increment-stat-button">+</button>
 			</div>
 			<div class="wisdom">
 				<div class="statName">Wisdom:</div>
 				<div class="stat">10</div>
-				(<div class="mod">0</div>)
+				<div id="empty">(</div><div class="mod">0</div><div id="empty">)</div>
 				<button type="button" class="decrement-stat-button">-</button>
 				<button type="button" class="increment-stat-button">+</button>
 			</div>
 			<div class="charisma">
 				<div class="statName">Charisma:</div>
 				<div class="stat">10</div>
-				(<div class="mod">0</div>)
+				<div id="empty">(</div><div class="mod">0</div><div id="empty">)</div>
 				<button type="button" class="decrement-stat-button">-</button>
 				<button type="button" class="increment-stat-button">+</button>
 			</div>
 		</div>
-		<div id="throws"><p>Throws</p>
+		<div id="throws">
 			<div class="strength">
 				<div class="mod">0</div>
 				<div class="statName">Strength</div>
@@ -154,7 +154,7 @@
 				<button type="button" class="toggle-proficiency"><i class="fa fa-circle-thin"></i></button>
 			</div>
 		</div>
-		<div id="skills"><p>Skills</p>
+		<div id="skills">
 			<div class="acrobatics">
 				<div class="mod">0</div>
 				<div class="skill dex">Acrobatics(Dex)</div>
@@ -249,7 +249,7 @@
 		<div id="spellDC">Spell Save DC: <div id="spellDCStat">0</div></div>
 		<div id="spellAtkBonus">Spell Attack Bonus: <div id="spellAtkBonusStat">0</div></div>
     </main>
-	<button type="button" id="save-button">Save</button>
+	<button type="button" id="save-button"><i class="fa fa-circle-thin"></i></button>
   </body>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.runtime.js"></script>

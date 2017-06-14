@@ -118,6 +118,12 @@ main{
 
 }
 
+#empty{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
 #throws div{
 
 	display: inline-block;
