@@ -33,6 +33,10 @@
 	background-color: #8b0000;
 }
 
+header a{
+	text-decoration: none;
+}
+
 body{
 	background-color: #dddddd;
 	margin: 0;
@@ -41,6 +45,26 @@ body{
 
 main{
 	padding: 60px;
+}
+input{
+	width: 160px;
+	border: none;
+	background-color: #ffffff;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 0px;
+}
+
+select{
+	width: 160px;
+	border:none;
+	overflow: hidden;
+	padding: 5px 8px;
+	border-radius: 3px;
+}
+
+select:focus{
+	outline: none;
 }
 
 #charInfo{
