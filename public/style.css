@@ -60,6 +60,7 @@ main{
 	display: inline-block;
 	border: 1px solid #000000;
 	padding: 5px;
+	margin: 5px;
 }
 .stats .statName{}
 .stats .stat{}
@@ -71,6 +72,7 @@ main{
 	display: inline-block;
 	border: 1px solid #000000;
 	padding: 5px;
+	margin: 5px;
 }
 
 #throws .mod{}
@@ -80,6 +82,7 @@ main{
 	display: inline-block;
 	border: 1px solid #000000;
 	padding: 5px;
+	margin: 5px;
 }
 #skills .mod{}
 #skills .description{}
