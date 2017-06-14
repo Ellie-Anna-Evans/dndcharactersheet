@@ -31,6 +31,7 @@ app.get('/create-sheet', function(req, res, next){
 
 app.get('/csheet/:index', function(req, res, next){
 	console.log("== url params for request:", req.params);
+	app.use(express.static(path.join(__dirname, 'public')));
 	
 	if(req.params.index < cSheetData.length){
 		var templateArgs = {
