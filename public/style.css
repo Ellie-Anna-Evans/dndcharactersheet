@@ -183,12 +183,29 @@ select:focus{
 	padding: 0px;
 }
 
-#throws .throw-element{
+#throws .strength{
+	padding-left: 16px;
 	padding-right: 56px;
 }
 
-#throws .strength{
-	padding-left: 16px;
+#throws .dexterity{
+	padding-right: 56px;
+}
+
+#throws .constitution{
+	padding-right: 56px;
+}
+
+#throws .intelligence{
+	padding-right: 56px;
+}
+
+#throws .wisdom{
+	padding-right: 56px;
+}
+
+#throws .charisma{
+	padding-right: 56px;
 }
 
 #throws button{
