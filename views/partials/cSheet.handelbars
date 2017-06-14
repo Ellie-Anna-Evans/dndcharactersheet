@@ -1,0 +1,49 @@
+<main>
+	<div id="charInfo">
+		<div>{{name}}</div>
+		<div>{{level}}</div>
+		<div>{{class}}</div>
+		<div>{{race}}</div>
+		<div>{{background}}</div>
+		<div>{{alignment}}</div>
+		<div>{{proficiency}}</div>
+	</div>
+	<div class="stats">
+		<div>{{str}}<div>{{strmod}}</div></div>
+		<div>{{dex}}<div>{{dexmod}}</div></div>
+		<div>{{con}}<div>{{conmod}}</div></div>
+		<div>{{intl}}<div>{{intlmod}}</div></div>
+		<div>{{wis}}<div>{{wismod}}</div></div>
+		<div>{{cha}}<div>{{chamod}}</div></div>
+	</div>
+	<div id="throws">
+		<div>{{strthrow}}<div>{{strprof}}</div></div>
+		<div>{{dexthrow}}<div>{{dexprof}}</div></div>
+		<div>{{conthrow}}<div>{{conprof}}</div></div>
+		<div>{{intlthrow}}<div>{{intlprof}}</div></div>
+		<div>{{wisthrow}}<div>{{wisprof}}</div></div>
+		<div>{{dexthrow}}<div>{{dexprof}}</div></div>
+	</div>
+	<div id="skills">
+		<div>{{acrobatics}}<div>{{acrobaticsProf}}</div></div>
+		<div>{{animalHandling}}<div>{{animalHandlingProf}}</div></div>
+		<div>{{arcana}}<div>{{arcanaProf}}</div></div>
+		<div>{{athletics}}<div>{{athleticProf}}</div></div>
+		<div>{{deception}}<div>{{deceptionProf}}</div></div>
+		<div>{{history}}<div>{{histroyProf}}</div></div>
+		<div>{{insight}}<div>{{insightProf}}</div></div>
+		<div>{{intimidation}}<div>{{intimidationProf}}</div></div>
+		<div>{{investigation}}<div>{{investigationProf}}</div></div>
+		<div>{{medicine}}<div>{{medicineProf}}</div></div>
+		<div>{{nature}}<div>{{natureProf}}</div></div>
+		<div>{{perception}}<div>{{perceptionProf}}</div></div>
+		<div>{{performance}}<div>{{performanceProf}}</div></div>
+		<div>{{persuasion}}<div>{{persuasionProf}}</div></div>
+		<div>{{religion}}<div>{{religionProf}}</div></div>
+		<div>{{sleightOfHand}}<div>{{sleightOfHandProf}}</div></div>
+		<div>{{stealth}}<div>{{stealthProf}}</div></div>
+		<div>{{survival}}<div>{{survivalProf}}</div></div>
+	</div>
+	<div id="spellDC">{{spellDC}}</div>
+	<div id="spellAttackBonus">{{spellAttackBonus}}</div>
+</main>

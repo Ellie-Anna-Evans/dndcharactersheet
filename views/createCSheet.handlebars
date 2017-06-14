@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>D&D Character Creation</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Serif+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css" media="screen">
-  </head>
-  <body>
-    <header>
-		<a href ="#"><h2 class="site-title">DnD Create a Character</h2></a>
-		<nav class="navigation">
-			<ul class="navlist">
-				<a href="#"><li class="navitem navlink">Home</li></a>
-				<a href="#"><li class="navitem navlink">Create a Sheet</li></a>
-			</ul>
-		</nav>
-    </header>
-    <main>
+{{header}}
+
+<main>
 		<div id="charInfo">
 			<input type="text" id="name" placeholder="Enter Character Name">
 			<input type="text" id="level" placeholder="Enter Level">
@@ -249,10 +232,4 @@
 		<div id="spellDC">Spell Save DC: <div id="spellDCStat">0</div></div>
 		<div id="spellAtkBonus">Spell Attack Bonus: <div id="spellAtkBonusStat">0</div></div>
 		<button type="button" id="save-button"><i class="fa fa-circle-thin"></i></button>
-    </main>
-  </body>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.runtime.js"></script>
-  <script src="./index.js" charset="utf-8"></script>
-  
-</html>
+</main>
