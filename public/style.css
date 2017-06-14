@@ -67,11 +67,21 @@ select:focus{
 	outline: none;
 }
 
-#charInfo{
+.label{
+	padding-top: 10px;
+	text-decoration: underline;
+}
 
+.ability-label{
+	padding-top: 20px;
+}
+
+#charInfo{
+	margin-left: 5px;
 	flex: 0 1 33%;
 	flex-wrap: wrap;
-	border: 1px solid #000000;
+	border: 0px solid #000000;
+	padding-left: 10px;
 }
 #charInfo #name{
 	margin: 5px;
@@ -94,24 +104,24 @@ select:focus{
 }
 #charInfo #proficieny{
 	display: inline-block;
+	padding-left: 5px;
 }
 #charInfo #profStat{
 	display: inline-block;
 }
 
 .stats{
-	border: 1px solid #000000;
+	border: 0px solid #000000;
 	margin: 5px;
 }
 
 .stats div {
 	display: inline-block;
-	border: 1px solid #000000;
+	border: 0px solid #000000;
 	padding: 5px;
 	margin: 5px;
 }
 .stats .statName{
-
 	border: 0px;
 	padding-right: 0px;
 }
@@ -148,10 +158,14 @@ select:focus{
 	padding: 0;
 }
 
+#throws{
+	border: 0px;
+}
+
 #throws div{
 
 	display: inline-block;
-	border: 1px solid #000000;
+	border: 0px solid #000000;
 	padding: 5px;
 	margin: 5px;
 }
@@ -180,9 +194,13 @@ select:focus{
 
 }
 
+#skills{
+	border: 0px;
+}
+
 #skills	div{
 	display: inline-block;
-	border: 1px solid #000000;
+	border: 0px solid #000000;
 	padding: 5px;
 	margin: 5px;
 }
@@ -232,4 +250,8 @@ select:focus{
 	background-color: #8b0000;
 	color: #fff;
 	cursor: pointer;
+}
+
+#save-button:hover{
+	background-color: #ad0000;
 }
