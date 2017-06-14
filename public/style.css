@@ -43,15 +43,41 @@ main{
 	padding: 60px;
 }
 
-#charInfo #name{}
-#charInfo #level{}
-#charInfo #class{}
-#charInfo #race{}
-#charInfo #background{}
-#charInfo #alignment{}
-#charInfo #proficieny{}
+#charInfo{
+
+	flex: 0 1 33%;
+	flex-wrap: wrap;
+	border: 1px solid #000000;
+}
+#charInfo #name{
+	margin: 5px;
+}
+#charInfo #level{
+	margin: 5px;
+
+}
+#charInfo #class{
+	margin: 5px;
+}
+#charInfo #race{
+	margin: 5px;
+}
+#charInfo #background{
+	margin: 5px;
+}
+#charInfo #alignment{
+	margin: 5px;
+}
+#charInfo #proficieny{
+	display: inline-block;
+}
 #charInfo #profStat{
 	display: inline-block;
+}
+
+.stats{
+	border: 1px solid #000000;
+	margin: 5px;
 }
 
 .stats div {
@@ -61,6 +87,7 @@ main{
 	margin: 5px;
 }
 .stats .statName{
+
 	border: 0px;
 	padding-right: 0px;
 }
@@ -88,9 +115,11 @@ main{
 
 .stats button:hover{
 	background-color: #be0000;
+
 }
 
 #throws div{
+
 	display: inline-block;
 	border: 1px solid #000000;
 	padding: 5px;
@@ -98,6 +127,7 @@ main{
 }
 
 #throws .mod{
+
 	border: 0px;
 	padding: 0px;
 }
@@ -117,6 +147,7 @@ main{
 
 #throws button:hover{
 	background-color: #bbbbbb;
+
 }
 
 #skills	div{
@@ -125,6 +156,7 @@ main{
 	padding: 5px;
 	margin: 5px;
 }
+
 #skills .mod{
 	border: 0px;
 	padding: 0px;
@@ -134,6 +166,7 @@ main{
 	padding: 0px;
 }
 #skills .toggle-proficiency{}
+
 
 #skills button{
 	border-radius: 5px;
