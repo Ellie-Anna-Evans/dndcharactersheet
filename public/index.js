@@ -87,22 +87,18 @@ function setSaveThrow(){
 }
 /* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
 function setSpellDC(charClass){
-	var spellSaveDC = document.getElementById('spellDCStat');
-	var profBonus = parseInt(document.getElementById('profStat'));
-	if(charClass === ('bard' || 'paladin' ||  'sorcerer' ||  'warlock')){
+	var profBonus = parseInt(document.getElementById('profStat').textContent);
+	if((charClass === 'bard') || (charClass === 'paladin') || (charClass === 'sorcerer') || (charClass === 'warlock')){
 		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
-		spellSaveDC = 8 + profBonus + spellMod;
-	}
-	else if(charClass === ('cleric' || 'druid' || 'ranger')){
+		document.getElementById('spellDCStat').textContent = 8 + profBonus + spellMod;
+	} else if((charClass === 'cleric') || (charClass === 'druid') || (charClass === 'ranger')){
 		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
-		spellSaveDC = 8 + profBonus + spellMod;
-	}
-	else if(charClass === ('fighter' || 'rogue' || 'wizard')){
+		document.getElementById('spellDCStat').textContent = 8 + profBonus + spellMod;
+	} else if((charClass === 'fighter') || (charClass === 'rogue') || (charClass === 'wizard')){
 		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
-		spellSaveDC = 8 + profBonus + spellMod;
-	}
-	else{
-		spellSaveDC = 0;
+		document.getElementById('spellDCStat').textContent = 8 + profBonus + spellMod;
+	} else{
+		document.getElementById('spellDCStat').textContent = 0;
 	}
 }
 /*	Spellcasting abilities per class
@@ -121,22 +117,18 @@ function setSpellDC(charClass){
 */
 /* Spell Attack Bonus = proficiency bonus + spellcasting ability modifier*/
 function setSpellAtkBonus(charClass){
-	var spellAtk = document.getElementById('spellAtkBonusStat');
-	var profBonus = parseInt(document.getElementById('profStat'));
-	if(charClass === ('bard' || 'paladin' || 'sorcerer' ||  'warlock')){
+	var profBonus = parseInt(document.getElementById('profStat').textContent);
+	if((charClass === 'bard') || (charClass === 'paladin') || (charClass === 'sorcerer') || (charClass === 'warlock')){
 		var spellMod = parseInt(document.getElementsByClassName('charisma')[0].children[2].textContent);
-		spellAtk = profBonus + spellMod;
-	}
-	else if(charClass === ('cleric' || 'druid' || 'ranger')){
+		document.getElementById('spellAtkBonusStat').textContent = profBonus + spellMod;
+	} else if((charClass === 'cleric') || (charClass === 'druid') || (charClass === 'ranger')){
 		var spellMod = parseInt(document.getElementsByClassName('wisdom')[0].children[2].textContent);
-		spellAtk = profBonus + spellMod;
-	}
-	else if(charClass === ('fighter' || 'rogue' || 'wizard')){
+		document.getElementById('spellAtkBonusStat').textContent = profBonus + spellMod;
+	} else if((charClass === 'fighter') || (charClass === 'rogue') || (charClass === 'wizard')){
 		var spellMod = parseInt(document.getElementsByClassName('intelligence')[0].children[2].textContent);
-		spellAtk = profBonus + spellMod;
-	}
-	else{
-		spellAtk = 0;
+		document.getElementById('spellAtkBonusStat').textContent = profBonus + spellMod;
+	} else{
+		document.getElementById('spellAtkBonusStat').textContent = 0;
 	}
 }
 
@@ -154,6 +146,8 @@ window.addEventListener('DOMContentLoaded', function() {
 			incrementStat(event.target.parentNode);
 			setSaveThrow();
 			setSkills();
+			setSpellAtkBonus(classValue);
+			setSpellDC(classValue);
 		});
 	}
 	
@@ -163,11 +157,25 @@ window.addEventListener('DOMContentLoaded', function() {
 			decrementStat(event.target.parentNode);
 			setSaveThrow();
 			setSkills();
+			setSpellAtkBonus(classValue);
+			setSpellDC(classValue);
 		});
 	}
 	
 	setSaveThrow();
 	setSkills();
+	
+	var classOption = document.getElementById('class');
+	var raceOption = document.getElementById('race');
+	var backOption = document.getElementById('background');
+	var alignOption = document.getElementById('alignment');
+	var classValue;
+	
+	classOption.addEventListener('change', function(event){
+		setSpellAtkBonus(event.target.value);
+		setSpellDC(event.target.value);
+		classValue = event.target.value;
+	});
 	
 	var toggleButtons = document.getElementsByClassName('toggle-proficiency');
 	for (var i = 0; i < toggleButtons.length; i++){
