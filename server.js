@@ -15,6 +15,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res, next){
+  console.log("== url params for request:", req.params);
 	
   var templateArgs = {
 	links: homePageData
@@ -24,12 +25,12 @@ app.get('/', function(req, res, next){
 });
 
 app.get('/create-sheet', function(req, res, next){
+	console.log("== url params for request:", req.params);
 	res.render('createCSheet');
 });
 
 app.get('/csheet/:index', function(req, res, next){
 	console.log("== url params for request:", req.params);
-	console.log(cSheetData.length);
 	
 	if(req.params.index < cSheetData.length){
 		var templateArgs = {
