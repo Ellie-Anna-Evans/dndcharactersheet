@@ -8,7 +8,6 @@
 .navlist {
   margin: 0 0 0 20px;
   padding: 0;
-
 }
 
 .navitem {
@@ -61,11 +60,35 @@ main{
 	padding: 5px;
 	margin: 5px;
 }
-.stats .statName{}
-.stats .stat{}
-.stats .mod{}
+.stats .statName{
+	border: 0px;
+	padding-right: 0px;
+}
+.stats .stat{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+.stats .mod{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
 .stats .increment-stat-button{}
 .stats .decrement-stat-button{}
+.stats button{
+	border-radius: 10px;
+	background-color: #8b0000;
+	border: 0px;
+	color: #ffffff;
+	font-weight: bold;
+	width: 20px;
+	height: 20px;
+}
+
+.stats button:hover{
+	background-color: #be0000;
+}
 
 #throws div{
 	display: inline-block;
@@ -74,8 +97,27 @@ main{
 	margin: 5px;
 }
 
-#throws .mod{}
-#throws .statName{}
+#throws .mod{
+	border: 0px;
+	padding: 0px;
+}
+#throws .statName{
+	border: 0px;
+	padding: 0px;
+}
+
+#throws button{
+	border-radius: 5px;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	color: #ffffff;
+	background-color: #999999;
+}
+
+#throws button:hover{
+	background-color: #bbbbbb;
+}
 
 #skills	div{
 	display: inline-block;
@@ -83,9 +125,28 @@ main{
 	padding: 5px;
 	margin: 5px;
 }
-#skills .mod{}
-#skills .description{}
+#skills .mod{
+	border: 0px;
+	padding: 0px;
+}
+#skills .skill{
+	border: 0px;
+	padding: 0px;
+}
 #skills .toggle-proficiency{}
+
+#skills button{
+	border-radius: 5px;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	color: #ffffff;
+	background-color: #999999;
+}
+
+#skills button:hover{
+	background-color: #bbbbbb;
+}
 
 #spellDCStat{
 	display: inline-block;
