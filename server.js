@@ -3,6 +3,7 @@ var fs = require('fs');
 var express = require('express');
 var exphbs = require('express-handlebars');
 
+var homePageData = require('./homePageData
 var cSheetData = require('./cSheetData');
 var app = express();
 var port = process.env.PORT || 3000;
