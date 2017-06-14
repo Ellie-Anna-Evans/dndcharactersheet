@@ -8,7 +8,6 @@
 .navlist {
   margin: 0 0 0 20px;
   padding: 0;
-
 }
 
 .navitem {
@@ -88,28 +87,35 @@ main{
 	margin: 5px;
 }
 .stats .statName{
-	border: none;
+
+	border: 0px;
+	padding-right: 0px;
 }
-.stats .stat{}
-.stats .mod{}
-.stats .increment-stat-button{
-	border-radius: 33px;
-	height: 25px;
-	width: 25px;
-	border: solid;
-	border-width: 1px;
+.stats .stat{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 }
-.stats .decrement-stat-button{
-	border-radius: 33px;
-	height: 25px;
-	width: 25px;
-	border: solid;
-	border-width: 1px;
+.stats .mod{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+.stats .increment-stat-button{}
+.stats .decrement-stat-button{}
+.stats button{
+	border-radius: 10px;
+	background-color: #8b0000;
+	border: 0px;
+	color: #ffffff;
+	font-weight: bold;
+	width: 20px;
+	height: 20px;
 }
 
-#throws{
-	border: 1px solid #000000;
-	margin: 5px;
+.stats button:hover{
+	background-color: #be0000;
+
 }
 
 #throws div{
@@ -122,14 +128,26 @@ main{
 
 #throws .mod{
 
+	border: 0px;
+	padding: 0px;
 }
 #throws .statName{
-	border: none;
+	border: 0px;
+	padding: 0px;
 }
 
-#skills{
-	border: 1px solid #000000;
-	margin: 5px;
+#throws button{
+	border-radius: 5px;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	color: #ffffff;
+	background-color: #999999;
+}
+
+#throws button:hover{
+	background-color: #bbbbbb;
+
 }
 
 #skills	div{
@@ -138,22 +156,29 @@ main{
 	padding: 5px;
 	margin: 5px;
 }
-#skills .mod{}
-#skills .str,
-#skills .cha,
-#skills .wis,
-#skills .intl,
-#skills .dex,
-#skills .con{
-	border: none;
+
+#skills .mod{
+	border: 0px;
+	padding: 0px;
+}
+#skills .skill{
+	border: 0px;
+	padding: 0px;
+}
+#skills .toggle-proficiency{}
+
+
+#skills button{
+	border-radius: 5px;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	color: #ffffff;
+	background-color: #999999;
 }
 
-.toggle-proficiency{
-	border-radius: 33px;
-	height: 30px;
-	width: 30px;
-	border: solid;
-	border-width: 1px;
+#skills button:hover{
+	background-color: #bbbbbb;
 }
 
 #spellDCStat{

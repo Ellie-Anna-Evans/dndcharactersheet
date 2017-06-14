@@ -36,7 +36,7 @@ function toggleProf(skill){
 		setSaveThrow();
 		setSkills();
 		return;
-	} else{
+	}else{
 		skill.classList.add('toggled');
 		setSaveThrow();
 		setSkills();
@@ -83,7 +83,7 @@ function setSaveThrow(){
 	for (var i = 0; i < 6; i++){
 		throwList[i].children[0].textContent = statList[i].children[2].textContent;
 		if(throwList[i].classList.item(1) === 'toggled'){ throwList[i].children[0].textContent = parseInt(throwList[i].children[0].textContent) + 2};
-	}	
+	}
 }
 /* Spell Save DC = 8 + proficiency bonus + spellcasting ability modifier */
 function setSpellDC(charClass){
