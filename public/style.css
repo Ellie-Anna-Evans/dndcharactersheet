@@ -148,6 +148,11 @@ select:focus{
 	padding: 0;
 }
 
+#throws{
+	border: 1px solid #000000;
+	margin: 5px;
+}
+
 #throws div{
 
 	display: inline-block;
@@ -178,6 +183,11 @@ select:focus{
 #throws button:hover{
 	background-color: #bbbbbb;
 
+}
+
+#skills{
+	border: 1px solid #000000;
+	margin: 5px;
 }
 
 #skills	div{
