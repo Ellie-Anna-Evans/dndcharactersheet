@@ -115,12 +115,13 @@ select:focus{
 	margin: 5px;
 }
 
-.stats div {
+.stats div{
 	display: inline-block;
 	border: 0px solid #000000;
 	padding: 5px;
 	margin: 5px;
 }
+
 .stats .statName{
 	border: 0px;
 	padding-right: 0px;
@@ -178,6 +179,14 @@ select:focus{
 #throws .statName{
 	border: 0px;
 	padding: 0px;
+}
+
+#throws .throw-element{
+	padding-right: 56px;
+}
+
+#throws .strength{
+	padding-left: 16px;
 }
 
 #throws button{
